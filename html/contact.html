@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liév'info - Contact</title>
+    <link rel="shortcut icon" href="../assets/img/logo-petit.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<!-- BODY -->
+<body>
+    <!-- NAVIGATION -->
+    <!-- Large NavBar -->
+    <nav id="largenav">
+        <div class="navSection">
+            <a href="../index.html"><img class="logo" src="../assets/img/logo-petit.png" alt="Logo Liev'info"></a>
+        </div>
+        <div id="navRight" class="navSection">
+            <div>
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="../html/evenements.html" >Événements</a></li>
+                    <li><a href="../html/actualites.html" >Actualités</a></li>
+                    <li><a href="#">Ma Commune</a></li>
+                    <li><a href="../html/contact.html" class="navActive">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-icon">
+                <a href="https://fr-fr.facebook.com/LievinMaVille/" target="_blank"><img src="../assets/img/fb-nav.png" alt="Logo facebook"></a>
+                <a href="https://www.instagram.com/lievinmaville/?hl=fr" target="_blank"><img src="../assets/img/insta-nav.png" alt="Logo instagram"></a>
+                <a href="https://twitter.com/agglolenslievin" target="_blank"><img src="../assets/img/twitter-nav.png" alt="Logo Twitter"></a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Small NavBar -->
+    <nav id="smallnav">
+        <div id="menuToggle">
+            <input type="checkbox" name="" id="">
+            <img src="../assets/img/burger.png" alt="Menu burger">
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="../html/evenements.html">Événements</a></li>
+                <li><a href="../html/actualites.html" >Actualités</a></li>
+                <li><a href="#">Ma Commune</a></li>
+                <li><a href="../html/contact.html" class="navActive">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="contact-space"></div>
+
+    <!-- MAIN -->
+    <main class="contact">
+        <!-- SECTION COORDONNEES -->
+        <section class="contact-info">
+            <article>
+                <div class="contact-img">
+                    <div class="contact-h1">
+                        <h1>Nos coordonnées</h1>
+                    </div>
+                </div>
+                <div class="contact-contact">
+                    <div class="contact-logo">
+                        <img src="../assets/img/logo.png" alt="logo Liév'info">
+                    </div>
+                    <div class="contact-adress">
+                        <p><span>Liév'info</span></p>
+                        <p>3 rue Léon Blum</p>
+                        <p>62800 Liévin</p>
+                        <p>Tél : 03.21.01.20.35</p>
+                    </div>
+                    <div class="contact-social"> 
+                        <a href="https://fr-fr.facebook.com/LievinMaVille/" target="_blank"><img src="../assets/img/fb-nav.png" alt="logo facebook"></a>
+                        <a href="https://www.instagram.com/lievinmaville/?hl=fr" target="_blank"><img src="../assets/img/insta-nav.png" alt="logo instagram"></a>
+                        <a href="https://twitter.com/agglolenslievin" target="_blank"><img src="../assets/img/twitter-nav.png" alt="logo twitter"></a>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <div class="contact-space"></div>
+        <div class="contact-para"></div>
+
+        <!-- SECTION FORMULAIRE -->
+        <section class="contact-form">
+            <article>
+                <div class="contact-img">
+                    <div class="contact-h1">
+                        <h1>Nous contacter</h1>
+                    </div>
+                </div>
+                <form method="post" action="envoi.php">
+                    <p>
+                        <input type="text" name="nom" id="nom" placeholder="Nom" required>
+                        <input type="text" name="prenom" id="prenom" placeholder="Prénom" required>
+                    </p>
+                    <input type="email" name="email" id="email" placeholder="Votre Email" required>
+                    <input type="text" name="sujet" id="sujet" placeholder="Sujet du message">
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
+                    <input type="submit" class="send-form" value="Envoyer">
+                </form>
+            </article>
+        </section>
+        <div class="contact-space"></div>
+
+        <!-- SECTION MAP -->
+        <section class="contact-map">
+            <article>
+                <div class="contact-img">
+                    <div class="contact-h1">
+                        <h1>Nous trouver</h1>
+                    </div>
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.889295461927!2d2.7908664158953798!3d50.4245341971127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dd309c6ca4baed%3A0xa74796c32881e693!2s3%20Rue%20L%C3%A9on%20Blum%2C%2062800%20Li%C3%A9vin!5e0!3m2!1sfr!2sfr!4v1641374401052!5m2!1sfr!2sfr" width="80%" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </article>     
+        </section>
+    </main>
+
+    <div class="contact-space"></div>
+    <div class="contact-para"></div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div id="contact">
+            <div>
+                <h4>Nos coordonnées</h4>
+                <p>3 rue Léon Blum,</p>
+                <p>62800 Liévin.</p>
+            </div>
+            <div>
+                <h4>Nous contacter</h4>
+                <p>tel : <a href="tel:0321012035">03.21.01.20.35</a></p>
+                <p>Mail : <a href="mailto:antoine.verin@liev-info.fr">antoine.verin@liev-info.fr</a></p>
+            </div>
+            <div>
+                <h4>Nous suivre</h4>
+                <div>
+                    <a href="https://fr-fr.facebook.com/LievinMaVille/" target="_blank"><img src="../assets/img/fb-foot.png" alt="Logo facebook"></a>
+                    <a href="https://www.instagram.com/lievinmaville/?hl=fr" target="_blank"><img src="../assets/img/insta-foot.png" alt="Logo instagram"></a>
+                    <a href="https://twitter.com/agglolenslievin" target="_blank"><img src="../assets/img/twitter-foot.png" alt="Logo twitter"></a>
+                </div>
+            </div>
+        </div>
+        <div id="legal">
+            <p>Tous droits réservés - 2022</p>
+        </div>
+    </footer>
+</body>
+</html>

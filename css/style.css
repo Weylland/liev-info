@@ -1,0 +1,861 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+a {
+    text-decoration: none;
+    color: rgb(50, 165, 241);
+}
+/* Navbar */
+/* Large Nav */
+#largenav {
+    background:rgb(240, 240, 240);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    z-index: 100;
+}
+.navSection {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+}
+.logo {
+    width: 200px;
+}
+input[checkbox] {
+    background: rgb(30, 30, 30);
+    z-index: 1000;
+}
+nav ul {
+   display: flex; 
+   list-style: none;
+   width: fit-content;
+   justify-content: space-around;
+}
+nav li:hover {
+    transform: scale(0.90);
+    transition: 0.8s ease;
+}
+nav a {
+    color: rgb(30, 30, 30);
+    font-size: 1.3em;
+    font-weight: 600;
+    padding: 0 20px;
+}
+nav a:hover {
+    transform: scale(0.95);
+    color:rgb(50, 165, 241);
+    transition: 0.8s ease;
+}
+.navActive {
+    color:rgb(50, 165, 241);
+}
+.nav-icon {
+    display: flex;
+}
+nav img {
+    padding: 0 10px;
+}
+/* Small Nav */
+#smallnav img {
+    display: none;
+}
+/*Header*/
+header {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+header div {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.219);
+    z-index: 1;
+}
+h1 {
+    font-size: 4em;
+    text-align: center;
+    color:rgb(240, 240, 240);
+    z-index: 2;
+}
+#videohead {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+}
+/*Main*/
+.home {
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "actu widget"
+    "event widget"
+    ;
+}
+/* Actu / Event Section */
+.actu {
+    grid-area: actu;
+    display: grid;  
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr;
+    grid-template-areas: 
+    "actutitle actutitle actutitle"
+    "actumain actumain actu1"
+    "actumain actumain actu2"
+    "actu3 actu4 actu5"
+    ;
+    border-bottom: 1px solid rgb(30, 30, 30);
+}
+h2 {
+    margin-right: 40px;
+    padding: 20px 0 20px 40px;
+    font-size: 3em;
+}
+.home p {
+    font-size: 50px;
+}
+.actutitle a h2,
+.eventtitle a h2{
+    font-size: 2.5em;
+    margin-right: 40px;
+    padding: 20px 0 20px 40px;
+}
+.eventtitle:hover,
+.actutitle:hover {
+    transform: scale(0.97);
+    transition: 0.3s linear;
+}
+.actutitle {
+    grid-area: actutitle;
+}
+.actumain {
+    grid-area: actumain;
+}
+.actu1 {
+    grid-area: actu1;
+}
+.actu2 {
+    grid-area: actu2;
+}
+.actu3 {
+    grid-area: actu3;
+}
+.actu4 {
+    grid-area: actu4;
+}
+.actu5 {
+    grid-area: actu5;
+}
+.card {
+    padding: 0 10px 10px 0;
+    height: fit-content;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.cardlink {
+    width: 100%;
+    display: block;
+    padding-left: 15px;
+}
+.cardimage {
+    width: 100%;
+}
+.cardimage img {
+    width: 100%;
+}
+.cardtext {
+    width: 100%;
+    margin: 20px 0;
+    color: rgb(30, 30, 30);
+}
+.card a {
+    color: rgb(30, 30, 30);
+}
+.card:hover {
+    transform: scale(0.98);
+    transition: 0.2s linear;
+}
+.hovereffect:hover {
+    background-color: rgb(220, 220, 220);
+    box-shadow: 3px 3px 5px rgb(30, 30, 30);
+}
+h3 {
+    font-size: 1.5em;
+    font-weight: 900;
+}
+.event {
+    grid-area: event;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+    "eventtitle eventtitle eventtitle"
+    "event1 event2 event3"
+    ;
+}
+.eventtitle {
+    grid-area: eventtitle;
+}
+.eventtitle,
+.actutitle {
+    display: flex;
+    align-items: center;
+    
+    cursor: pointer;
+}
+.arrow img {
+    margin-top: 4px;
+    width: 30px;
+}
+.line {
+    width: 70%;
+    height: 2px;
+    background: rgb(50, 165, 241);
+}
+event1 {
+    grid-area: event1;
+}
+event2 {
+    grid-area: event2;
+}
+event3 {
+    grid-area: event3;
+}
+/* Widget Section */
+.widget { 
+    grid-area: widget;
+}
+.widgetcontainer {
+    width: 100%; 
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+        "live"
+        "weather"
+        "calendar"
+    ;
+    row-gap: 30px;
+}
+/* live */
+.live {
+    grid-area: live;
+    width: 100%;
+    height: 730px;
+    border: 1px solid rgb(50, 165, 241);
+    padding: 10px;
+    overflow-y: hidden;
+    margin: auto;
+}
+.live p {
+    font-size: 0.8em;
+    margin: 10px 0;
+    border-bottom: 1px solid rgb(30, 30, 30);
+    padding-bottom: 5px;
+}
+.live h5 {
+    color: rgb(50, 165, 241);
+    margin: 10px 0;
+}
+.live h4 { 
+    font-size: 1em; 
+    margin: 20px 0;
+    border-bottom: 2px solid rgb(50, 165, 241);
+    padding-bottom: 20px;
+}
+.live h4 {
+    color: rgb(50, 165, 241);
+    margin: 10px 0;
+}
+/* Weather */
+.weather {
+    grid-area: weather;
+    height: fit-content;
+    width: 100%;
+    margin: auto;
+}
+.weather iframe {
+    width: 100%;
+}
+/* Calendar */
+.calendar {
+    grid-area: calendar;
+    width: 100%;
+    margin: auto;
+}
+.calendar iframe {
+    width: 100%;
+}
+/* Footer */
+footer {
+    background-color: rgb(30, 30, 30);
+    color: rgb(240, 240, 240);
+}
+#contact {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+#legal {
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(20, 20, 20);
+}
+h4 {
+    text-align: center;
+    font-size: 1.3em;
+    margin-bottom: 7px;
+    color:rgb(50, 165, 241);
+}
+footer p {
+    font-size: 1.2em;
+    margin: 5px;
+}
+footer img {
+    padding:0 10px;
+}
+footer a { 
+    color:rgb(240, 240, 240);
+}
+/*******************************************************/
+/****************** Actualités *************************/
+/*******************************************************/
+.actuspace {
+    height: 50px;
+}
+.actualites h2 {
+    text-align: center;
+    background-color: rgba(210, 210, 210, 0.5);
+    color: rgb(50, 165, 241);
+    margin: 50px 0;
+    padding: 0;
+}
+.actualites h3{
+    font-size: 2em;
+}
+.actualites section{
+    margin-bottom: 100px;
+}
+/* actu a la une */
+.actuune {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "aactumain aactumain aactu1"
+    "aactumain aactumain aactu2"
+    "aactu3 aactu4 aactu5";
+}
+.actuune a{
+    color: rgb(30, 30, 30);
+}
+.aactumain {
+    grid-area: aactumain;
+}
+.aactumain h3{
+    margin-bottom: 10px ;
+}
+.aactu1 {
+    grid-area: aactu1;
+}
+.aactu2 {
+    grid-area: aactu2;
+}
+.aactu3 {
+    grid-area: aactu3;
+}
+.aactu4 {
+    grid-area: aactu4;
+}
+.aactu5 {
+    grid-area: aactu5;
+}
+.acard{
+    padding:20px;
+}
+.acard img {
+    width: 100%;
+}
+.acard:hover{
+    background-color: rgb(220, 220, 220);
+    box-shadow: 3px 3px 5px rgb(30, 30, 30);
+    transition-duration: 0.5s;
+}
+/* actu all */
+.actuall {
+    width: 80%;
+    margin: auto;
+}
+.actulongcard {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    padding: 20px 20px;
+    margin:20px 0;
+}
+.actulongcard:hover{
+    background-color: rgb(220, 220, 220);
+    box-shadow: 3px 3px 5px rgb(30, 30, 30);
+    transition-duration: 0.5s;
+}
+.actuall a{
+    color:rgb(30, 30, 30);
+}
+.actulgimg {
+    width: 30%;
+
+}
+.actulgimg img {
+    width:100%
+}
+.actulievinfo{
+    font-size: 1.4em;
+    margin-bottom: 5px;
+}
+.actuliev{
+    color: rgb(170, 0, 0);
+}
+.actuinfo{
+    color: rgb(50, 165, 241);
+}
+.actulgdescription {
+    padding-left: 2em;
+    width:70%;
+}
+.actudescription {
+    font-size: 1.3em;
+}
+.actudate {
+    text-align: end; 
+    font-size: 1em;
+    font-weight: 600;
+    color: rgb(100, 100, 100);
+}
+/* pagination */
+.actupagination {
+    display: flex;
+    justify-content: center;
+}
+.actupagination a {
+    width: fit-content;
+    font-size: 1.5em;
+    font-weight: 600;
+    padding : 10px 20px;
+    margin: 3px;
+    border: 2px solid rgb(50, 165, 241);
+    border-radius: 10px;
+}
+.actupage {
+    color: rgb(50, 165, 241);
+    background-color: rgb(250, 250, 250);
+}
+.actupage:hover {
+    color: rgb(240, 240, 240);
+    background-color: rgb(50, 165, 241);
+    transition: 0.5s;
+}
+.actupageactive {
+    color: rgb(240, 240, 240);
+    background-color: rgb(50, 165, 241);
+}
+/*******************************************************/
+/********************* Details *************************/
+/*******************************************************/
+.detailsarticle {
+    width: 80%;
+    margin: auto;
+}
+.detailsarticle h3 {
+    font-size:3em;
+    margin: 0 0 50px 0;
+}
+.detailsimg {
+    margin:auto;
+    width:fit-content;
+}
+.detailsarticle img {
+    max-width: 900px;
+    width:100%;
+}
+.detailsinfo {
+    font-size: 0.8em;
+    margin-bottom: 30px;
+}
+.detailsredac {
+    font-size: 0.9em;
+    color: rgb(50, 165, 241);
+    margin-top: 30px;
+}
+.detailstext {
+    font-size: 1.5em;
+}
+.detailstext h5 {
+    margin:10px;
+    font-size: 1.4em;
+}
+.details h2 {
+    text-align: center;
+    background-color: rgba(210, 210, 210, 0.5);
+    color: rgb(50, 165, 241);
+    margin: 50px 0;
+    padding: 0;
+}
+.details p {
+    margin-bottom: 30px;
+} 
+.detailspdf{
+    margin:60px 0 10px 0;
+    float: right;
+    padding: 10px 30px;
+    color: rgb(170, 0, 0);
+    background-color: rgb(250, 250, 250);
+    border: 2px solid rgb(170, 0, 0);
+    border-radius: 10px;
+}
+.detailspdf:hover {
+    color: rgb(240, 240, 240);
+    background-color: rgb(170, 0, 0);
+    transition: 0.5s;
+}
+.detailsclear {
+    clear: both;
+}
+.detailsalireaussi {
+    width: 80%;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "details1 details2 details3";
+
+    padding-bottom: 30px;
+}
+.detailsalireaussi a {
+    color:rgb(30, 30, 30);
+}
+/*---------------------------- PAGE CONTACT --------------------*/
+/*--------------------------------------------------------------*/
+/*----- Récurrents --*/
+.contact-space {
+    padding-top: 150px;
+}
+.contact {
+    text-align: center;
+}
+.contact h1 {
+    color: rgb(50, 165, 241);
+    background-color: rgb(200, 200, 200, 0.75);
+    margin: 50px 0;
+    font-size: 5em;
+    font-family: 'Montserrat', sans-serif;
+}
+/*----- Coordonnées --*/
+.contact .contact-img {
+    background-image: url(../assets/img/parallax.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 500px;
+    width: 100%;
+    margin-bottom: 100px;
+}
+.contact .contact-img .contact-h1 {
+    padding: 150px 0;
+}
+.contact .contact-info .contact-contact {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    color: rgb(30, 30, 30);
+    
+}
+.contact .contact-info .contact-contact span {
+    font-weight: 600;
+    font-size: 1.8em;
+}
+.contact .contact-info .contact-contact .contact-logo img {
+    width: 50%;
+    margin: 100px 0;
+}
+.contact .contact-info .contact-contact .contact-social img {
+    flex-direction: column;
+    width: 50%;
+    padding: 20px 0;
+}
+.contact .contact-info .contact-contact .contact-social img:hover {
+    transition: .5s;
+    transform: scale(0.90);
+}
+.contact .contact-info p {
+    font-size: 2em;
+    padding: 15px 0;
+}
+/*----- Formulaire de contact --*/
+.contact-form form, .contact-form p {
+    width: 500px;
+    margin:auto;
+    font-size: 18px;
+    text-align: left;
+}
+.contact-form form input, textarea {
+    display: block;
+    width: 100%;
+    border: 2px solid rgb(170, 0, 0);
+    border-radius: 25px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: rgb(200, 200, 200);
+    height: 40px;
+}
+.contact-form form input:hover {
+    background-color: rgb(240, 240, 240);
+    transition: .5s;
+
+}
+.contact-form form textarea {
+    height: 150px;
+}
+  .contact-form form textarea:hover {
+    background-color: rgb(240, 240, 240);
+    transition: .5s;
+}
+.contact-form form .send-form {
+    width: 50%;
+    margin: auto;
+    padding: 0 60px;
+    border-radius: 15px;
+    border: 0;
+    background-color: rgb(50, 165, 241);
+    color: rgb(170, 0, 0);
+    font-size: 1.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.contact-form form .send-form:hover {
+    transition:  .3s ease;
+    color: rgb(50, 165, 241);
+    background-color: rgb(170, 0, 0);
+    transform: scale(0.95);
+    box-shadow: 0 0 20px rgb(255, 39, 39);
+}
+.contact-form form p {
+    display: flex;
+    justify-content: space-between;
+}
+  .contact-form form p input {
+    width: calc(50% - 10px);
+}
+/*********************** Media Querries *********************/
+@media screen and (max-width: 1024px) {
+    /* nav */
+    /* Large Nav */
+    #largenav {
+        display: none;
+    }
+    /* Small Nav */
+    #smallnav img {
+        display: block;
+        position: fixed;
+        top: 15px;
+        left: 10px;
+        width: 70px;
+        z-index: 5;
+    }
+    #smallnav input:hover ~ img {
+        transform: scale(0.90);
+    }
+    #smallnav ul {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        background: rgb(240, 240, 240);
+    }
+    #smallnav li {
+        margin: 20px 0;
+        text-align: center;
+        font-size: 1.5em;
+    }
+    #smallnav li:nth-child(1) {
+        margin-top: 200px;
+    }
+    /* Burger Menu */
+    #logosn {
+        margin: 200px;
+    }
+    #menuToggle input {
+      display: block;
+      width: 70px;
+      height: 70px;
+      position: fixed;
+      top: 4px;
+      left: 10px;
+      cursor: pointer;
+      opacity: 0;
+      z-index: 6;
+    } 
+    #menuToggle input:checked ~ ul {
+        display: block;
+        width: 80%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+    }
+    /* Home */
+    .home {
+        width: 98%;
+        margin: 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
+        grid-template-areas: 
+        "actu"
+        "event";
+        padding: 5px;
+    }
+    /* Actu */
+    .actu {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto repeat(6, 1fr);
+        grid-template-areas: 
+        "actutitle"
+        "actumain"
+        "actu1"
+        "actu2"
+        "actu3"
+        "actu4"
+        "actu5"
+        ;
+    }
+    /* Event / Actu */
+    .event {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto repeat(3, 1fr);
+        grid-template-areas: 
+        "eventtitle"
+        "event1"
+        "event2"
+        "event3"
+        ;
+    }
+    .arrow,
+    .line {
+        display: none;
+    }
+    .card {
+        margin: auto;
+    }
+    .widget {
+        display: none;
+    }
+    #contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #contact div {
+        margin: 30px 0;
+    }
+    /************* contact *********************/
+    .contact h1{
+        font-size: 3em;
+    }
+    .contact .contact-info .contact-contact {
+        flex-direction: column;
+    }
+    .contact .contact-info .contact-contact .contact-social{
+        margin-top: 50px;
+    }
+    .contact .contact-info .contact-contact .contact-social img {
+        width: 50px;
+        padding: 0 10px;
+    }
+    .contact .contact-info p {
+        font-size: 1.2em;
+    }
+    .contact-form form, .contact-form p {
+        width: 98%;  
+    }
+    .contact-map iframe {
+        height: 400px;
+    }
+    .contact-form form .send-form {
+        padding: 0px 30px;
+    }
+    /******************** actu / detail ***********************/
+    .actuall, .actuune, .actupage {
+        width: 98%;
+    }
+    .actuune {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-areas: 
+        "aactumain"
+        "aactu1"
+        "aactu2"
+        "aactu3"
+        "aactu4"
+        "aactu5"
+        ;
+    }
+    .actulongcard {
+        display:block;
+        width: 100%;
+        min-width: 200px;
+        margin: auto;
+    }
+    .actulgimg {
+        width: 100%;
+    }
+    .actulgdescription {
+        padding-left: 0;
+        width:100%;
+    }
+    .actupagination a {
+        width: fit-content;
+        font-size: 0.8em;
+        font-weight: 600;
+        padding : 3px 7px;
+        margin: 3px;
+        border-radius: 10px;
+    }
+    .detailsalireaussi{
+        width:98%;
+    }
+    .detailsalireaussi {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "details1"
+        "details2"
+        "details3"
+        ;   
+    }  
+    .detailsarticle {
+        width: 98%;
+    }
+}
