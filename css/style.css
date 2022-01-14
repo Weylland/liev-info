@@ -333,7 +333,7 @@ footer a {
     color:rgb(240, 240, 240);
 }
 /*******************************************************/
-/****************** Actualités *************************/
+/************ Actualités Évenement Détail **************/
 /*******************************************************/
 .actuspace {
     height: 50px;
@@ -351,7 +351,7 @@ footer a {
 .actualites section{
     margin-bottom: 100px;
 }
-/* actu a la une */
+/* Section À la une */
 .actuune {
     width: 80%;
     margin: auto;
@@ -363,6 +363,7 @@ footer a {
     "aactumain aactumain aactu2"
     "aactu3 aactu4 aactu5";
 }
+/* Option card */
 .actuune a{
     color: rgb(30, 30, 30);
 }
@@ -398,11 +399,13 @@ footer a {
     box-shadow: 3px 3px 5px rgb(30, 30, 30);
     transition-duration: 0.5s;
 }
-/* actu all */
+/*** Fin option card ***/
+/* Section Actu Récentes */
 .actuall {
     width: 80%;
     margin: auto;
 }
+/*** Option long card ***/
 .actulongcard {
     width: 100%;
     margin: auto;
@@ -448,6 +451,7 @@ footer a {
     font-weight: 600;
     color: rgb(100, 100, 100);
 }
+/*** Fin option long Card ***/
 /* pagination */
 .actupagination {
     display: flex;
@@ -475,9 +479,8 @@ footer a {
     color: rgb(240, 240, 240);
     background-color: rgb(50, 165, 241);
 }
-/*******************************************************/
-/********************* Details *************************/
-/*******************************************************/
+/*** Fin pagination ***/
+/* Article */
 .detailsarticle {
     width: 80%;
     margin: auto;
@@ -506,10 +509,6 @@ footer a {
 .detailstext {
     font-size: 1.5em;
 }
-.detailstext h5 {
-    margin:10px;
-    font-size: 1.4em;
-}
 .details h2 {
     text-align: center;
     background-color: rgba(210, 210, 210, 0.5);
@@ -520,6 +519,8 @@ footer a {
 .details p {
     margin-bottom: 30px;
 } 
+/*** Fin Article ***/
+/* Button Download */
 .detailspdf{
     margin:60px 0 10px 0;
     float: right;
@@ -537,6 +538,8 @@ footer a {
 .detailsclear {
     clear: both;
 }
+/*** Fin Button download ***/
+/* Section 3 card */
 .detailsalireaussi {
     width: 80%;
     margin: auto;
@@ -551,6 +554,42 @@ footer a {
 }
 .detailsalireaussi a {
     color:rgb(30, 30, 30);
+}
+/*** Fin Section 3 card ***/
+/************************************************/
+/****************** ma commune ******************/
+/************************************************/
+
+.macomspace{
+    padding: 100px;
+}
+.macomm p{
+    font-size: 1.5em;
+}
+.macomm {
+    width:80%;
+    margin: auto;
+    background-image: url(../assets/img/fond_de_page.jpg);
+    background-repeat: repeat;
+    background-size:100%;
+}
+.macommpage{
+    padding: 5% 12% 5% 12%;
+}
+.titre{
+    font-size: 23px;
+    font-weight: bold;
+    color:black;
+    text-decoration: underline;
+}
+.titre:hover{
+    font-size: 26px;
+    transition: .5s;
+    color:rgb(50, 165, 241);
+}
+#parchemin{
+    z-index: 0;
+    position:relative;
 }
 /*---------------------------- PAGE CONTACT --------------------*/
 /*--------------------------------------------------------------*/
@@ -568,7 +607,8 @@ footer a {
     font-size: 5em;
     font-family: 'Montserrat', sans-serif;
 }
-/*----- Coordonnées --*/
+
+/*----- Propriété de l'image Parallax --*/
 .contact .contact-img {
     background-image: url(../assets/img/parallax.jpg);
     background-position: center;
@@ -578,6 +618,7 @@ footer a {
     width: 100%;
     margin-bottom: 100px;
 }
+/*----- Coordonnées --*/
 .contact .contact-img .contact-h1 {
     padding: 150px 0;
 }
@@ -619,6 +660,7 @@ footer a {
     text-align: left;
 }
 .contact-form form input, textarea {
+    /*----- Personnalisation des éléments Input --*/
     display: block;
     width: 100%;
     border: 2px solid rgb(170, 0, 0);
@@ -641,6 +683,7 @@ footer a {
     transition: .5s;
 }
 .contact-form form .send-form {
+    /*----- Personnalisation du bouton Enoyer --*/
     width: 50%;
     margin: auto;
     padding: 0 60px;
@@ -807,7 +850,7 @@ footer a {
         padding: 0px 30px;
     }
     /******************** actu / detail ***********************/
-    .actuall, .actuune, .actupage {
+    .actuall, .actuune, .actupage, .detailsarticle, .detailsalireaussi {
         width: 98%;
     }
     .actuune {
@@ -822,6 +865,16 @@ footer a {
         "aactu5"
         ;
     }
+    .detailsalireaussi {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "details1"
+        "details2"
+        "details3"
+        ;   
+    }  
+    /* Long card responsive */
     .actulongcard {
         display:block;
         width: 100%;
@@ -835,6 +888,7 @@ footer a {
         padding-left: 0;
         width:100%;
     }
+    /*** Fin long card responsive ***/
     .actupagination a {
         width: fit-content;
         font-size: 0.8em;
@@ -842,20 +896,5 @@ footer a {
         padding : 3px 7px;
         margin: 3px;
         border-radius: 10px;
-    }
-    .detailsalireaussi{
-        width:98%;
-    }
-    .detailsalireaussi {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas: 
-        "details1"
-        "details2"
-        "details3"
-        ;   
-    }  
-    .detailsarticle {
-        width: 98%;
     }
 }
